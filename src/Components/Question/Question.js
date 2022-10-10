@@ -5,9 +5,9 @@ const Question = ({ question }) => {
   console.log(question);
   let id = 0;
   return (
-    <div>
+    <div className="border border-lime-300 p-8">
       {question.question}
-      <div className="grid grid-cols-4">
+      <div className="grid grid-cols-2 justify-center items-center">
         {question.options.map((option) => (
           <Option option={option} key={id++}></Option>
         ))}

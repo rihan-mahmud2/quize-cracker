@@ -5,13 +5,15 @@ const Option = ({ option }) => {
     <div>
       <div className="form-control">
         <label className="label cursor-pointer">
-          <input
-            type="radio"
-            name="radio-6"
-            className="radio checked:bg-red-500"
-            checked
-          />
-          <span className="label-text">{option}</span>
+          <div className="flex justify-center items-center">
+            <input
+              type="radio"
+              name="radio-6"
+              className="radio checked:bg-red-500"
+              checked
+            />
+            <span className="label-text ml-3">{option}</span>
+          </div>
         </label>
       </div>
     </div>
