@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import About from "./Components/About/About";
+import Blog from "./Components/Blog/Blog";
 
 import Home from "./Components/Home/Home";
 import Questions from "./Components/Questions/Questions";
@@ -33,6 +34,10 @@ function App() {
           loader: ({ params }) =>
             fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
           element: <Questions></Questions>,
+        },
+        {
+          path: "/blog",
+          element: <Blog></Blog>,
         },
         { path: "*", element: <WrongPath></WrongPath> },
       ],

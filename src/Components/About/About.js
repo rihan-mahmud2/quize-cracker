@@ -7,8 +7,8 @@ const About = () => {
   const data = useLoaderData().data;
 
   return (
-    <div>
-      <BarChart width={730} height={250} data={data}>
+    <div className="mt-20 mx-auto max-w-200">
+      <BarChart width={630} height={150} data={data}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />
