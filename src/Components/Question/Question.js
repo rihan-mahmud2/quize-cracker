@@ -1,26 +1,27 @@
 import React from "react";
 import Option from "../Option/Option";
-
-import { ToastContainer, toast } from "react-toastify";
+import { BeakerIcon, EyeIcon } from "@heroicons/react/24/solid";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Question = ({ question }) => {
+const Question = ({ question, SerialNo }) => {
   console.log(question);
   const handleClick = (option) => {
     if (option === question.correctAnswer) {
-      console.log("congrats");
-      toast("Wow so easy!");
+      toast("That's Correct Answer!!");
+    } else {
+      toast("Icorrect Answer");
     }
   };
   let id = 0;
-  let SlNo = 1;
-  SlNo++;
+
   return (
-    <div className=" p-8 min-w-[400px] shadow-xl w-1/2">
+    <div className="p-8 shadow-xl w-1/2">
+      <EyeIcon className="h-6 w-6 text-blue-500" />
       <h1>
-        Questions No {SlNo} {question.question}
+        Questions No: {SerialNo} {question.question}
       </h1>
-      <div className="grid grid-cols-2 justify-center items-center border border-pink-200 mt-3 p-5 shadow-lg">
+      <div className="grid grid-cols-2 mt-3 p-5 shadow-lg">
         {question.options.map((option) => (
           <Option option={option} handleClick={handleClick} key={id++}></Option>
         ))}
