@@ -9,7 +9,8 @@ const Questions = () => {
 
   return (
     <div className="m-10">
-      <h1>This is the questions page</h1>
+      <h1>This is the {data.name} quiz questions</h1>
+
       <div className="grid grid-cols-1 gap-10">
         {questions.map((question) => (
           <Question question={question}></Question>
