@@ -1,12 +1,13 @@
 import React from "react";
 
-const Option = ({ option }) => {
+const Option = ({ option, handleClick }) => {
   return (
     <div>
       <div className="form-control">
         <label className="label cursor-pointer">
           <div className="flex justify-center items-center">
             <input
+              onClick={() => handleClick(option)}
               type="radio"
               name="radio-6"
               className="radio checked:bg-red-500"
